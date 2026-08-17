@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "dev": "ng -p ../wt-experience",
+    "build": "cd ../wt-experience && npm run build",
+    "export": "cd ../wt-experience && npm run build && cp -r ../wt-experience/.next /home/taira/austen-picturesque-visions/static-build/",
+    "lint": "next lint"
+  }
+}
