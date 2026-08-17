@@ -1,0 +1,168 @@
+@keyframes subtlePulse {
+  0%, 100% { opacity: 0.92; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+@keyframes particleGlow {
+  0% { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 0.7; transform: scale(2); }
+}
+
+@keyframes progressFill {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+  font-family: 'Playfair Display', serif;
+  overflow: hidden;
+}
+
+.introScreen {
+  text-align: center;
+  padding: 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.mainTitle {
+  font-size: 3.5rem;
+  color: #f5f5f5;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.lensSelector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.lensOption {
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: subtlePulse 4s infinite;
+}
+
+.lensOption:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.picturesqueScene {
+  background: linear-gradient(180deg, #2d2b1f 0%, #4a4234 100%);
+}
+
+.socialClassScene {
+  background: linear-gradient(180deg, #0d1b2a 0%, #1a365d 100%);
+}
+
+.psychologicalScene {
+  background: linear-gradient(180deg, #2b2b2b 0%, #5a3555 100%);
+}
+
+.viewerContainer {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-size: cover;
+  background-position: center;
+  transition: background 1s ease-in-out;
+}
+
+.sceneContent {
+  position: relative;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.backButton {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 1.5rem;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.backButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sceneImage {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 10px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+}
+
+.caption {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.loadingOverlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  width: 80%;
+  max-width: 600px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #c9a86a, #d9b876, #c9a86a);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.loadingText {
+  font-size: 1rem;
+  color: #aaa;
+}

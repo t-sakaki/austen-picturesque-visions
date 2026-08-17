@@ -11,3 +11,4 @@ An interactive experience designed for Emilia (Emiko Sato), translating her rese
 - `/src/server`: Backend logic and AI orchestration.
 - `/prompts`: System prompts for Visual/Dialogue AI.
 - `/tests`: Validation and quality assurance.
+# Re-trigger
