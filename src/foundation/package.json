@@ -1,0 +1,27 @@
+{
+  "name": "picturesque-vision-foundation",
+  "version": "1.0.0",
+  "description": "AI prompt generation engine for the Picturesque Visions project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node aestheticsPromptEngine.js",
+    "test": "echo \"No tests yet\" && exit 0",
+    "dev": "node --watch aestheticsPromptEngine.js"
+  },
+  "keywords": [
+    "aesthetics",
+    "prompt-engine",
+    "picturesque",
+    "jane-austen",
+    "gemini",
+    "byteplus"
+  ],
+  "author": "Emilia's Research Team",
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
