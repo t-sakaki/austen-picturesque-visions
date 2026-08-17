@@ -1,20 +1,16 @@
 {
   "name": "austen-picturesque-visions",
   "version": "1.0.0",
-  "description": "An interactive exploration of Jane Austen's landscapes through the lens of Picturesque aesthetics.",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "export": "next export",
+    "start": "next start"
   },
   "dependencies": {
     "next": "14.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "@next/next": "14.2.4"
   }
 }
