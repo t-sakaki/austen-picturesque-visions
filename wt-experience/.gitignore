@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+*.log
+EOF && \
+git rm -r --cached wt-experience/node_modules && \
+rm -rf wt-experience/node_modules && \
+git add wt-experience/.gitignore && \
+git status --short wt-experience/ && \
+git commit -m "fix: remove node_modules from git, add .gitignore" && \
+git push origin main
