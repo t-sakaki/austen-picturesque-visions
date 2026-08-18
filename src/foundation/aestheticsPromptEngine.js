@@ -466,7 +466,7 @@ if (require.main === module) {
   try {
     const result = generateAestheticsPrompt({
       sceneDescription: options.scene || 'a pastoral English landscape',
-      writeTitle: options.work || '',
+      workTitle: options.work || '',
       characterEmotion: options.emotion || '',
       statusIndicator: options.status || '',
       lens: lens,
