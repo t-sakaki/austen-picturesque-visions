@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Picturesque Visions - Jane Austen Landscape Explorer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'austen-cream': '#f5f0e6',
+          'austen-gold': '#b8860b',
+          'austen-charcoal': '#36454f',
+        },
+        fontFamily: {
+          serif: ['Georgia', 'Times New Roman', 'serif'],
+        },
+      },
+    },
+  }
+</script>
+</head>
+<body class="bg-austen-cream text-austen-charcoal font-serif min-h-screen">
+  <header class="border-b-2 border-austen-gold py-4 px-6">
+    <div class="max-w-4xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-serif italic tracking-wide">Picturesque Visions</h1>
+      <nav class="space-x-6 text-sm uppercase tracking-widest">
+        <a href="#picturesque" class="hover:text-austen-gold transition">Picturesque</a>
+        <a href="#social-class" class="hover:text-austen-gold transition">Social Class</a>
+        <a href="#psychological" class="hover:text-austen-gold transition">Psychological</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <section class="text-center mb-16">
+      <h2 class="text-3xl font-serif mb-4">A Jane Austen Landscape Explorer</h2>
+      <p class="text-lg text-austen-charcoal/80 max-w-2xl mx-auto leading-relaxed">
+        Step into the world of Jane Austen through the lens of landscape aesthetics. 
+        Select a lens below to begin your journey.
+      </p>
+    </section>
+
+    <section id="picturesque" class="mb-16">
+      <div class="bg-white rounded-lg shadow-sm border border-austen-gold/20 p-8">
+        <h3 class="text-xl font-serif mb-2 flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-austen-gold inline-block"></span>
+          Picturesque Lens
+        </h3>
+        <p class="text-austen-charcoal/70 text-sm mb-4">
+          Roughness, variety, decay, painterly composition
+        </p>
+        <div class="w-full h-48 bg-gradient-to-br from-amber-200 via-amber-100 to-yellow-50 rounded-md mb-4"></div>
+        <p class="text-sm text-austen-charcoal/60 italic">
+          "The landscape is viewed as if it were a painting..."
+        </p>
+      </div>
+    </section>
+
+    <section id="social-class" class="mb-16">
+      <div class="bg-white rounded-lg shadow-sm border border-austen-gold/20 p-8">
+        <h3 class="text-xl font-serif mb-2 flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-austen-gold inline-block"></span>
+          Social Class Lens
+        </h3>
+        <p class="text-austen-charcoal/70 text-sm mb-4">
+          Status indicators, estate analysis, moral dimension
+        </p>
+        <div class="w-full h-48 bg-gradient-to-br from-stone-300 via-stone-200 to-stone-100 rounded-md mb-4"></div>
+        <p class="text-sm text-austen-charcoal/60 italic">
+          "Visual indicators of wealth: manicured lawns, formal gardens..."
+        </p>
+      </div>
+    </section>
+
+    <section id="psychological" class="mb-16">
+      <div class="bg-white rounded-lg shadow-sm border border-austen-gold/20 p-8">
+        <h3 class="text-xl font-serif mb-2 flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-austen-gold inline-block"></span>
+          Psychological Lens
+        </h3>
+        <p class="text-austen-charcoal/70 text-sm mb-4">
+          Emotional visualization, atmospheric metaphor, internal states
+        </p>
+        <div class="w-full h-48 bg-gradient-to-br from-slate-200 via-slate-100 to-slate-50 rounded-md mb-4"></div>
+        <p class="text-sm text-austen-charcoal/60 italic">
+          "Weather as emotional proxy: mist for uncertainty, storms for turmoil..."
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-austen-gold/20 py-6 px-6 mt-8">
+    <div class="max-w-4xl mx-auto text-center text-sm text-austen-charcoal/60">
+      <p>An interactive experience for Emilia — translating Jane Austen's landscape descriptions into visual journeys.</p>
+    </div>
+  </footer>
+</body>
+</html>
