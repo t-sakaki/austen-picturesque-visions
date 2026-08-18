@@ -9,7 +9,7 @@ on:
 permissions:
   contents: write
   pages: write
-  id-token: ***
+  id-token: write
 
 concurrency:
   group: github-pages-deploy
@@ -47,14 +47,3 @@ jobs:
           publish_dir: ./wt-experience/out
           keep_files: false
           force_orphan: true
-EOF && \
-echo "=== 差分確認 ===" && \
-git diff .github/workflows/deploy.yml && \
-echo "" && \
-echo "=== コミット & プッシュ ===" && \
-git add .github/workflows/deploy.yml && \
-git commit -m "fix: remove cache: npm from setup-node to stop it looking for package-lock.json at root" && \
-git push origin main && \
-echo "=== 数十秒待機後 Actions 確認 ===" && \
-sleep 45 && \
-gh run list --limit 3 --json databaseId,status,conclusion,headBranch,workflowName,number --jq '.[] | "● #\(.number) \(.workflowName) \(.status) \(.conclusion) head=\(.headBranch) databaseId=\(.databaseId)"'

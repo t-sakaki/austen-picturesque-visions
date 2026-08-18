@@ -1,0 +1,10 @@
+# ルート直の成果物（CI は wt-experience 内の npm ci しか使わない）
+package-lock.json
+deploy-check.sh
+
+# IDE / OS キャッシュ
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/

@@ -1,12 +1,17 @@
 import { useState, useEffect } from 'react';
 import styles from '../styles/ux.module.css';
 
+const LENS_BG = {
+  picturesque: 'linear-gradient(180deg, #2d2b1f 0%, #4a4234 100%)',
+  socialClass: 'linear-gradient(180deg, #0d1b2a 0%, #1a365d 100%)',
+  psychological: 'linear-gradient(180deg, #2b2b2b 0%, #5a3555 100%)',
+};
+
 export default function SceneViewer({ sceneData, activeLens, onBack }) {
   const [isVisible, setIsVisible] = useState(false);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Simulate loading progress for the satisfying "reveal"
     let interval = null;
     if (sceneData?.isPlaceholder) {
       interval = setInterval(() => {
@@ -22,25 +27,14 @@ export default function SceneViewer({ sceneData, activeLens, onBack }) {
     } else {
       setIsVisible(true);
     }
-
     return () => clearInterval(interval);
   }, [sceneData]);
 
-  const getLensStyles = () => {
-    switch (activeLens) {
-      case 'picturesque':
-        return styles.picturesqueScene;
-      case 'socialClass':
-        return styles.socialClassScene;
-      case 'psychological':
-        return styles.psychologicalScene;
-      default:
-        return styles.defaultScene;
-    }
-  };
-
   return (
-    <div className={` ${styles.viewerContainer} ${getLensStyles()}`}>
+    <div
+      className={styles.viewerContainer}
+      style={{ background: LENS_BG[activeLens] || LENS_BG.picturesque }}
+    >
       {!isVisible ? (
         <div className={styles.loadingOverlay}>
           <div className={styles.progressBar}>
@@ -49,21 +43,13 @@ export default function SceneViewer({ sceneData, activeLens, onBack }) {
               style={{ width: `${progress < 100 ? progress : 100}%` }}
             />
           </div>
-          <p className={styles.loadingText}>
-            The landscape comes to life...
-          </p>
+          <p className={styles.loadingText}>The landscape comes to life...</p>
         </div>
       ) : (
         <div className={styles.sceneContent}>
           <button onClick={onBack} className={styles.backButton}>
             ← View Another Perspective
           </button>
-          <img
-            src={sceneData?.imageSrc || '/placeholder.jpg'}
-            alt={`${activeLens} landscape`}
-            className={styles.sceneImage}
-            style={{ filter: sceneData?.isPlaceholder ? 'blur(5px)' : 'none' }}
-          />
           <div className={styles.caption}>{sceneData?.lensType || 'Picturesque'}</div>
         </div>
       )}
