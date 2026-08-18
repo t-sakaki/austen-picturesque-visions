@@ -37,9 +37,6 @@ jobs:
       - name: Build Next.js application
         run: cd wt-experience && npm run build
 
-      - name: Export static site
-        run: cd wt-experience && npx next export
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
